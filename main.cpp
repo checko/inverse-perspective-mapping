@@ -136,6 +136,9 @@ int main
     while (key != 27) // press esc to stop
         {
         cap >> im;
+		if (im.empty())
+			break;
+
         resize(im, imresize, Size(SRC_RESIZED_WIDTH, SRC_RESIZED_HEIGHT));
         cvtColor(imresize, grayresize, cv::COLOR_BGR2GRAY);
 
