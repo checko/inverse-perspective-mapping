@@ -137,7 +137,7 @@ int main
         {
         cap >> im;
         resize(im, imresize, Size(SRC_RESIZED_WIDTH, SRC_RESIZED_HEIGHT));
-        cvtColor(imresize, grayresize, CV_BGR2GRAY);
+        cvtColor(imresize, grayresize, cv::COLOR_BGR2GRAY);
 
         inverse_perspective_mapping(DST_REMAPPED_WIDTH, DST_REMAPPED_HEIGHT, grayresize.data, ipm_table, imremapped.data);
 
